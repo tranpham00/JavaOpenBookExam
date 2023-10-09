@@ -41,8 +41,18 @@ public class Vector2 extends MathObject implements Cloneable{
         return "Vector - X:" + x + " Y:" + y;
     }
 
+    public String getDescription()
+    {
+        return super.getDescription();
+    }
+
     public int getDimension()
     {
         return 2;
+    }
+
+    public Object clone() throws CloneNotSupportedException
+    {
+        return super.clone();
     }
 }

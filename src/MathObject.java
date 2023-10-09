@@ -11,5 +11,10 @@ public abstract class MathObject {
         description = des;
     }
 
+    public String getDescription()
+    {
+        return description;
+    }
+
     public abstract int getDimension();
 }
