@@ -1,9 +1,10 @@
-public class Vector2 {
+public class Vector2 extends MathObject implements Cloneable{
     private int x;
     private int y;
 
-    public Vector2(int xCor, int yCor)
+    public Vector2(String des, int xCor, int yCor)
     {
+        super(des);
         x = xCor;
         y = yCor;
     }
@@ -21,7 +22,7 @@ public class Vector2 {
     {
         int newX = this.x + other.x;
         int newY = this.y + other.y;
-        Vector2 vector = new Vector2(newX, newY);
+        Vector2 vector = new Vector2("sum vector", newX, newY);
         return vector;
     }
 
@@ -38,5 +39,10 @@ public class Vector2 {
     public String toString()
     {
         return "Vector - X:" + x + " Y:" + y;
+    }
+
+    public int getDimension()
+    {
+        return 2;
     }
 }
